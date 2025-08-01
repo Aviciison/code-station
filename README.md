@@ -1,7 +1,7 @@
 # code-station
 
 #### 介绍
-一个写代码文章的网站
+一个写代码文章的网站，和登陆账号后可以互相发信息的网站。使用socket.io实现实时通信。
 
 #### 软件架构
 前端：react umi-max typescript antd pro
