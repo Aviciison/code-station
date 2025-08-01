@@ -1,0 +1,79 @@
+.code-station-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+
+  &-left {
+    display: flex;
+    align-items: center;
+
+    &-logo {
+      width: 40px;
+      height: 40px;
+    }
+  
+    &-title {
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: 600;
+
+      .visible {
+        list-style: none;
+        position: absolute;
+        top: 70%;
+        left: 60px;
+        margin-left: -30px;
+        width: 143px;
+        padding: 8px;
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-radius: 15px;
+        box-shadow: 0 8px 24px #ebebeb;
+
+        &-choose {
+          color: @font-choose-color !important;
+        }
+
+        &-item {
+          text-align: center;
+          line-height: 48px;
+          font-size: 14px;
+          color: @font-color-grey;
+        }
+
+        // li {
+        //   text-align: center;
+        //   height: 48px;
+        //   line-height: 48px;
+        //   font-weight: 100;
+        // }
+      }
+    }
+
+    // .ant-dropdown {
+    //   padding: 40px !important;
+    //   inset: 45px auto auto 49px !important;
+    //   // inset: 45px auto auto 49px !important;
+    // }
+  }
+
+  &-right {
+    // flex: 1;
+    display: flex;
+    align-items: center;
+    &-headPic {
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        
+      }
+    }
+    &-username {
+      display: inline-block;
+      color: @font-color-grey;
+      margin-left: 8px;
+    }
+  }
+
+}

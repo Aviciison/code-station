@@ -1,0 +1,73 @@
+@media screen and (max-width: @width-medium) {
+  // .center-card {
+  //   margin: 0 40px 0 40px;
+  // }
+  .flex-index {
+    display: none;
+  }
+  .upDown {
+    &-userInfo {
+      margin-left: 5px;
+      &-center {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+
+        &-username {
+          font-size: 18px;
+        }
+      }
+      &-bottom {
+        color: @font-color-grey;
+        font-size: 15px;
+      }
+    }
+  }
+  .ant-pro-card-body {
+    padding-inline: 12px !important;
+    padding-block: 8px !important;
+  }
+  .big {
+    display: none;
+  }
+  .userInfo-avatar {
+    margin-right: 10px !important;
+  }
+}
+
+@media screen and (min-width: @width-mediumpuls) {
+  .upDown {
+    display: none;
+  }
+  .small {
+    display: none;
+  }
+}
+
+.top {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .userInfo {
+    display: flex;
+
+    &-avatar {
+      margin-right: 20px;
+    }
+
+    &-text {
+      &-dec {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: @font-color-grey;
+      }
+    }
+  }
+}
+
+.list {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+}

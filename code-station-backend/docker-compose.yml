@@ -1,0 +1,56 @@
+version: '3.8'
+services:
+  main-app:
+    image: fe-container:first
+    ports:
+      - 80:80
+    depends_on:
+      - nest-app
+      # - nest-app-chat-room
+    networks:
+      - common-network
+  nest-app:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    depends_on:
+      - mysql-container
+      - redis-container
+      # - minio-container
+    # ports:
+    #   - 3005:3005
+    networks:
+      - common-network
+  nest-app-chat-room:
+    build:
+      context: ./
+      dockerfile: ./apps/chat-room-backend/Dockerfile
+    depends_on:
+      - mysql-container
+      - nest-app
+    #   - redis-container
+    networks:
+      - common-network
+  mysql-container:
+    image: mysql
+    volumes:
+      - /Users/avicii/Documents/data/Mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: code_station_system
+      MYSQL_ROOT_PASSWORD: zwz
+    networks:
+      - common-network
+    ports:
+      - 3306:3306
+  redis-container:
+    image: redis
+    volumes:
+      - /Users/avicii/Documents/data/redis-data:/data
+    networks:
+      - common-network
+    ports:
+      - 6379:6379
+
+networks:
+  common-network:
+    driver: bridge

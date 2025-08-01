@@ -1,0 +1,94 @@
+.article {
+  padding: 12px 20px;
+  margin-top: 8px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.article-list {
+  &-head {
+    &-nickname {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+  }
+  &-body {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    &-left {
+      flex-grow: 1;
+      min-width: 0;
+      &-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+        line-height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &-title:hover {
+        color: #1890ff;
+      }
+      &-description {
+        font-size: 13px;
+        color: @font-color-grey;
+        line-height: 22px;
+        margin-bottom: 8px;
+        text-overflow: -o-ellipsis-lastline;
+        //整体超出部分隐藏
+        overflow: hidden;
+        //文本超出部分以...形式展示，同第一行样式代码
+        text-overflow: ellipsis;
+        //display 块级元素展示
+        display: -webkit-box;
+        //设置文本行数为2行
+        -webkit-line-clamp: 2;
+        //设置文本行数为2行
+        line-clamp: 2;
+        //从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）
+        -webkit-box-orient: vertical;
+      }
+      &-footer {
+        display: flex;
+        color: @font-color-grey;
+        line-height: 20px;
+        font-size: 12px;
+
+        &-like {
+          margin-left: 10px;
+        }
+
+        &-collect {
+          margin-left: 10px;
+        }
+      }
+    }
+    &-right {
+      margin-left: 24px;
+      flex-shrink: 0; //父盒子变小，这个盒子缩小
+      width: 120px;
+      height: 80px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @width-medium) {
+  .article {
+    padding: 12px !important;
+  }
+
+  .article-list-body-right {
+    width: 80px !important;
+    height: 54px !important;
+  }
+
+  .article-list-body-left-description {
+    margin-bottom: 8px !important;
+  }
+}

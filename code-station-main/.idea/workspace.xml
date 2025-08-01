@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7efed2ea-e970-40d8-b706-a69f929c6a6d" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/../code-station-backend/src/hook/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code-station-backend/src/role/dto/add-role.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code-station-backend/src/role/dto/get-role-list.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code-station-backend/src/role/dto/update-role-Info-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code-station-backend/src/role/dto/update-role-state-dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-station-backend/src/dict/dict.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../code-station-backend/src/dict/dict.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-station-backend/src/menu-menager/dto/update-menu.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../code-station-backend/src/menu-menager/dto/update-menu.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-station-backend/src/menu-menager/menu-menager.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../code-station-backend/src/menu-menager/menu-menager.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-station-backend/src/permission/permission.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../code-station-backend/src/permission/permission.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-station-backend/src/permission/permission.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../code-station-backend/src/permission/permission.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-station-backend/src/role/entities/role.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../code-station-backend/src/role/entities/role.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-station-backend/src/role/role.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../code-station-backend/src/role/role.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-station-backend/src/role/role.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../code-station-backend/src/role/role.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-station-backend/src/role/role.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../code-station-backend/src/role/role.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-station-backend/src/user/entities/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../code-station-backend/src/user/entities/user.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-station-backend/src/user/entities/webUser.eneity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../code-station-backend/src/user/entities/webUser.eneity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-station-backend/src/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../code-station-backend/src/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pure-admin-thin-main/src/api/system.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../pure-admin-thin-main/src/api/system.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pure-admin-thin-main/src/views/system/menuManager/form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../pure-admin-thin-main/src/views/system/menuManager/form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pure-admin-thin-main/src/views/system/menuManager/utils/hooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../pure-admin-thin-main/src/views/system/menuManager/utils/hooks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pure-admin-thin-main/src/views/welcome/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../pure-admin-thin-main/src/views/welcome/index.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2kaLxmwPB6eFbBnd5ilsM0PZR5f" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;future__03&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/avicii/Desktop/code-station/code-station-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/avicii/Desktop/code-station/code-station-main/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17890.13" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="7efed2ea-e970-40d8-b706-a69f929c6a6d" name="更改" comment="" />
+      <created>1723516989776</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723516989776</updated>
+      <workItem from="1723516990839" duration="438000" />
+      <workItem from="1724136349157" duration="1394000" />
+      <workItem from="1724239978943" duration="795000" />
+      <workItem from="1725523686328" duration="167000" />
+      <workItem from="1727156156847" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

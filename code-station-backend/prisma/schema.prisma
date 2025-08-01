@@ -1,0 +1,204 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:zwz@mysql-container/code_station_system"
+}
+
+model Friendship {
+  userId     Int
+  friendId   Int
+  createTime DateTime @default(now())
+  updateTime DateTime @updatedAt
+
+  @@id([userId, friendId])
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model Favorite {
+  id            Int      @id @default(autoincrement())
+  chatHistoryId Int
+  uerId         Int
+  createTime    DateTime @default(now())
+  updateTime    DateTime @updatedAt
+}
+
+model FriendRequest {
+  id         Int      @id @default(autoincrement())
+  fromUserId Int
+  toUserId   Int
+  reason     String   @db.VarChar(100)
+  status     Int
+  createTime DateTime @default(now())
+  updateTime DateTime @updatedAt
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model article {
+  articleId      String   @id @db.VarChar(255)
+  articleContent String   @db.VarChar(10000)
+  articleTitle   String   @db.VarChar(255)
+  description    String   @db.VarChar(255)
+  coverPic       String   @db.VarChar(500)
+  createTime     DateTime @default(now()) @db.DateTime(6)
+  updateTime     DateTime @default(now()) @db.DateTime(6)
+  userId         Int?
+  users          users?   @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FK_636f17dadfea1ffb4a412296a28")
+
+  @@index([userId], map: "FK_636f17dadfea1ffb4a412296a28")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model articleCollect {
+  createTime DateTime @default(now()) @db.DateTime(6)
+  updateTime DateTime @default(now()) @db.DateTime(6)
+  Id         String   @id @db.VarChar(255)
+  userId     Int
+  articleId  String   @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model articleExtra {
+  createTime   DateTime @default(now()) @db.DateTime(6)
+  updateTime   DateTime @default(now()) @db.DateTime(6)
+  id           Int      @default(autoincrement())
+  articleId    String   @db.VarChar(255)
+  viewCount    Int      @default(0)
+  likeCount    Int      @default(0)
+  collectCount Int      @default(0)
+
+  @@id([id, articleId])
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model articleLike {
+  createTime DateTime @default(now()) @db.DateTime(6)
+  updateTime DateTime @default(now()) @db.DateTime(6)
+  Id         String   @id @db.VarChar(255)
+  userId     Int
+  articleId  String   @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model dict_data {
+  createTime DateTime @default(now()) @db.DateTime(6)
+  updateTime DateTime @default(now()) @db.DateTime(6)
+  dict_code  Int      @id @default(autoincrement())
+  label      String   @db.VarChar(100)
+  value      String   @db.VarChar(100)
+  dict_type  String   @db.VarChar(100)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model dict_type {
+  createTime DateTime @default(now()) @db.DateTime(6)
+  updateTime DateTime @default(now()) @db.DateTime(6)
+  dict_id    Int      @id @default(autoincrement())
+  dict_name  String   @db.VarChar(100)
+  dict_type  String   @db.VarChar(100)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model label {
+  Id        String @id @db.VarChar(255)
+  labelId   String @db.VarChar(255)
+  articleId String @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model roleUserRelation {
+  createTime DateTime @default(now()) @db.DateTime(6)
+  updateTime DateTime @default(now()) @db.DateTime(6)
+  id         Int      @id @default(autoincrement())
+  roleId     String   @db.VarChar(255)
+  userId     Int
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model role_permission_relation {
+  createTime   DateTime @default(now()) @db.DateTime(6)
+  updateTime   DateTime @default(now()) @db.DateTime(6)
+  id           Int      @id @default(autoincrement())
+  roleId       String   @db.VarChar(32)
+  permissionId String   @db.VarChar(32)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model users {
+  id              Int       @id @default(autoincrement())
+  username        String    @unique(map: "User_username_key") @db.VarChar(50)
+  password        String    @db.VarChar(50)
+  email           String    @db.VarChar(50)
+  headPic         String?   @db.VarChar(255)
+  personalProfile String?   @db.VarChar(200)
+  createTime      DateTime  @default(now()) @db.DateTime(6)
+  updateTime      DateTime  @default(now()) @db.DateTime(6)
+  article         article[]
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model web_role {
+  createTime DateTime @default(now()) @db.DateTime(6)
+  updateTime DateTime @default(now()) @db.DateTime(6)
+  id         String   @id @db.VarChar(255)
+  roleName   String   @db.VarChar(255)
+  roleCode   String   @db.VarChar(255)
+  state      String   @default("01") @db.VarChar(255)
+  remarks    String?  @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model web_user_permission {
+  createTime  DateTime @default(now()) @db.DateTime(6)
+  updateTime  DateTime @default(now()) @db.DateTime(6)
+  id          String   @id @db.VarChar(255)
+  parent_id   String?  @db.VarChar(32)
+  title       String   @db.VarChar(32)
+  path        String   @db.VarChar(255)
+  route_name  String   @db.VarChar(255)
+  component   String?  @db.VarChar(32)
+  show_link   Int      @default(1) @db.TinyInt
+  rank        Int?
+  menu_type   String   @db.VarChar(255)
+  icon        String?  @db.VarChar(32)
+  show_parent Int?     @db.TinyInt
+  permission  String?  @db.VarChar(32)
+  created_by  String   @db.VarChar(255)
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model web_users {
+  id         Int      @id @default(autoincrement())
+  username   String   @db.VarChar(50)
+  password   String   @db.VarChar(50)
+  email      String   @db.VarChar(50)
+  createTime DateTime @default(now()) @db.DateTime(6)
+  updateTime DateTime @default(now()) @db.DateTime(6)
+}
+
+model ChatHistory {
+  id         Int      @id @default(autoincrement())
+  content    String   @db.VarChar(500)
+  type       Int
+  chatroomId Int
+  senderId   Int
+  createTime DateTime @default(now())
+  updateTime DateTime @updatedAt
+}
+
+model Chatroom {
+  id         Int      @id @default(autoincrement())
+  name       String   @db.VarChar(50)
+  type       Boolean  @default(false)
+  createTime DateTime @default(now())
+  updateTime DateTime @updatedAt
+}
+
+model UserChatroom {
+  userId     Int
+  chatroomId Int
+
+  @@id([userId, chatroomId])
+}
